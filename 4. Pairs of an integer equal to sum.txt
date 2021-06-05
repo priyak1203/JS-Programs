@@ -1,0 +1,31 @@
+4. JavaScript program to find all pairs of an integer array whose sum is equal to given target 
+
+
+How do you find all pairs of an integer array whose sum is equal to a given number?
+
+
+// How do you find all pairs of an integer array whose sum is equal to a given number?
+
+
+function getPairsCount(arr, len, sum) {
+  
+  var count = 0; 
+  
+  for(var i=0; i< len; i++) {
+    for(j=i+1; j<len; j++) {
+      if (arr[i] + arr[j] === sum) {
+        count++;
+      }
+    }
+  }
+  
+  return count; 
+}
+
+
+var arr = [ 1, 5, 7, -1, 5, 4, 2];
+var n = arr.length;
+var sum = 6;
+
+console.log("Pairs of integer = ", getPairsCount(arr,n,sum))
+
