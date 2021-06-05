@@ -1,0 +1,21 @@
+17. JavaScript Program to Check if two strings are a rotation of each other
+
+How do you check if two strings are a rotation of each other?
+
+
+// function to check if two strings are a rotation of each other.
+
+
+var mStr1 = "ABCDA";
+var mStr2 = "CDAAB"; 
+
+
+function areRotations(str1, str2) {
+  var temp = str1+str1;
+  if (temp.indexOf(str2) !== -1) {
+    return true;
+  }
+  return false; 
+}
+
+console.log(areRotations(mStr1, mStr2)); 

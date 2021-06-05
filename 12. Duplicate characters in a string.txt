@@ -1,0 +1,32 @@
+12. Program to check duplicate characters in a string 
+
+
+How are duplicate characters found in a string?
+
+// Function to find duplicate characters in a string 
+
+
+function printDuplicates(str) {
+  var count = {}; 
+  
+  for (var i=0; i<str.length; i++) {
+    count[str[i]] = 0;     // initalize all the values to 0 
+  }
+  
+//     console.log(count);
+  
+  for (var i=0; i<str.length; i++) {
+    count[str[i]]++;
+  }
+  
+//     console.log(count);
+  
+  for (var it in count) {
+    if (count[it] > 1 ) {
+      console.log(it + ", count = " + count[it]); 
+    }
+  }
+}
+
+printDuplicates("ABCA");
+

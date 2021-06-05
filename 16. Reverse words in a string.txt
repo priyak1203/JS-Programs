@@ -1,0 +1,23 @@
+16. JavaScript program to reverse words in a sentence.
+
+
+How do you reverse words in a given sentence without using any in-built method?
+
+
+
+
+// Reversing words using inbuilt method 
+
+var mStr = "I love programming very much likely"; 
+
+
+function reverseWords(str) {
+//   var mArray = str.split(" ");
+//   mArray.reverse();
+//   var result = mArray.join(" "); 
+//   return result;
+  
+  return str.split(" ").reverse().join(" ");
+}
+
+console.log(reverseWords(mStr)); 

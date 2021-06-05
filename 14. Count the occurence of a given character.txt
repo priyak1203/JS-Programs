@@ -1,0 +1,40 @@
+14. JavaScript program to check the occurrences of a given character in a string
+
+How do you count the occurrence of a given character in a string?
+
+
+// using for loop 
+
+function countString(str, letter) {
+  var count = 0;
+  
+  for(var i=0; i<str.length; i++) {
+    if (str.charAt(i) === letter) {
+      count +=1;
+    }
+  }
+  
+  return count; 
+}
+
+console.log(countString("hSchoohl", 'h'));
+
+// using regex
+
+function countStringRegEx(str, letter) {
+  var re = new RegExp(letter, 'g'); 
+  
+  var count;
+  if (str.match(re) === null ) {
+    count = 0;
+  } else {
+    count = str.match(re).length;
+  }
+  
+  
+  return count; 
+  
+}
+
+
+console.log(countStringRegEx("hSchoolh", 'h'));
