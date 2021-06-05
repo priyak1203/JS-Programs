@@ -1,0 +1,29 @@
+8. JavaScript program to check if two strings are anagrams 
+
+
+How do you check if two strings are anagrams of each other?
+
+// function to check anagram 
+
+function anagram(str1, str2) {
+  
+  if (str1.length !== str2.length) {
+    return false; 
+  }
+  
+  var mArr1 = str1.split("");
+  var mArr2 = str2.split(""); 
+  mArr1.sort();
+  mArr2.sort();
+  
+  for (var i=0; i<str1.length; i++) {
+    if (mArr1[i] !== mArr2[i]) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+
+console.log(anagram("hello", "oehl"))
